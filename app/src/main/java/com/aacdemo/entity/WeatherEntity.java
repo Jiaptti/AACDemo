@@ -13,6 +13,12 @@ public class WeatherEntity extends BaseEntity {
     private Now now;
     private String last_update;
 
+    public WeatherEntity(Location location, Now now, String last_update){
+        this.location = location;
+        this.now = now;
+        this.last_update = last_update;
+    }
+
     public Location getLocation() {
         return location;
     }

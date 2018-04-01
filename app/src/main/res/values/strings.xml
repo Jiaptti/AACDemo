@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">极简天气</string>
+    <string name="app_name">AACDemo</string>
 
     <!-- main !-->
     <string name="home">极简天气</string>
@@ -30,6 +30,8 @@
     <string name="search">搜索</string>
     <string name="search_hint">请输入城市名(中文/拼音等)</string>
     <string name="search_city_failed">抱歉, 未查询到城市</string>
+    <string name="save_success">添加成功</string>
+    <string name="delete_success">删除成功</string>
 
     <!-- detail !-->
     <string name="detail_predict">天气详情</string>

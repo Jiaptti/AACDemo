@@ -16,6 +16,7 @@ public class Location extends BaseEntity implements Parcelable{
     private String path;
     private String timezone;
     private String timezone_offset;
+    private boolean isFavorite;
 
     public String getId() {
         return id;
@@ -61,6 +62,14 @@ public class Location extends BaseEntity implements Parcelable{
         return timezone_offset;
     }
 
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
+    }
+
     public void setTimezone_offset(String timezone_offset) {
         this.timezone_offset = timezone_offset;
     }
@@ -72,6 +81,25 @@ public class Location extends BaseEntity implements Parcelable{
         dest.writeString(this.path);
         dest.writeString(this.timezone);
         dest.writeString(this.timezone_offset);
+    }
+
+    @Override
+    public String toString() {
+        return "LocationEntity{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", country='" + country + '\'' +
+                ", path='" + path + '\'' +
+                ", timezone='" + timezone + '\'' +
+                ", timezone_offset='" + timezone_offset + '\'' +
+                ", isFavorite ='" + isFavorite + '\'' +
+                '}';
+    }
+
+    public Location(String id, String name, String path){
+        this.id = id;
+        this.name = name;
+        this.path = path;
     }
 
     public Location() {

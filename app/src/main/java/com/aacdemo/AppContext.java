@@ -2,6 +2,8 @@ package com.aacdemo;
 
 import android.app.Application;
 
+import com.aacdemo.persistence.database.AppDataBase;
+
 /**
  * Created by hanjiaqi on 2018/3/28.
  */
@@ -13,7 +15,7 @@ public class AppContext extends Application{
     public void onCreate() {
         super.onCreate();
         mApp = this;
-//        AppContext.init();
+        AppDataBase.init();
     }
 
     public static AppContext getAppContext() {
